@@ -1,0 +1,32 @@
+#N canvas 407 91 761 479 10;
+#X obj 335 307 list store;
+#X msg 335 282 get \$1 1;
+#X obj 413 124 inlet list;
+#X obj 332 124 inlet output;
+#X obj 335 239 EPcount 7;
+#X obj 335 260 - 1;
+#X obj 335 329 outlet;
+#X text 319 89 Modified from list-help.pd example 3;
+#X obj 440 169 list length;
+#X text 516 169 tell EPcount how long to count for!;
+#X text 33 214 EPcount needs -1 because index starts at 0;
+#X text 22 20 Takes a list and outputs its items one at a time \, on
+receiving a bang to its left inlet.;
+#X obj 440 189 t l b;
+#X text 517 189 AND reset it!!!;
+#X obj 413 145 t l l b;
+#X obj 351 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 14 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 8 0 12 0;
+#X connect 12 0 4 1;
+#X connect 12 1 4 2;
+#X connect 14 0 0 1;
+#X connect 14 1 8 0;
+#X connect 14 2 0 1;
+#X connect 15 0 4 0;

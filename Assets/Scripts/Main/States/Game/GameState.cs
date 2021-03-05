@@ -83,7 +83,7 @@ public class GameState : MainState {
 				while(contentView.textTyper.typing)
 					yield return null;
 				if(story.canContinue)
-					yield return new WaitForSeconds(Mathf.Min(1.0f, contentView.textTyper.targetText.Length * 0.01f));
+					yield return new WaitForSeconds(Mathf.Min(1.0f, contentView.textTyper.targetText.Length * 0.1f));
 			}
 			if(story.currentChoices.Count > 0) {
 				yield return new WaitForSeconds(1f);

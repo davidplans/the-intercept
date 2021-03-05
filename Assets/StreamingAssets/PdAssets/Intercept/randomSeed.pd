@@ -1,0 +1,12 @@
+#N canvas 361 176 450 300 12;
+#X obj 184 55 r patchSeed;
+#X obj 201 81 loadbang;
+#X obj 183 131 *;
+#X msg 183 164 seed \$1;
+#X obj 183 190 outlet;
+#X obj 201 104 f \$0;
+#X connect 0 0 2 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 2 1;
