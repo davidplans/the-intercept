@@ -10,7 +10,7 @@
 #X obj 172 170 t b b b f;
 #X obj 204 492 *~;
 #X obj 252 395 r globalattack;
-#X obj 240 461 ADenv 50 5000;
+#X obj 240 461 ADenv 10 450;
 #X connect 0 0 5 0;
 #X connect 2 0 4 0;
 #X connect 3 0 2 0;

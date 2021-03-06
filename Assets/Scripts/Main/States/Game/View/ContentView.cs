@@ -2,12 +2,15 @@
 using System.Collections;
 
 public class ContentView : StoryElementView {
+	public LibPdInstance pdPatch;
 
 	public TypedText textTyper;
 	private RichTextSubstring richText;
 
 	public Color driedColor;
 	public Color wetColor;
+
+	string msg2pd = MyGlobals.pd2;
 
 	protected override void Awake () {
 		textTyper = new TypedText();
@@ -36,10 +39,13 @@ public class ContentView : StoryElementView {
 		textTyperSettings.customPostTypePause.Add(new TypedText.CustomStringTimeDelay("\n", new TypedText.RandomTimeDelay(0.5f,0.6f)));
 		if(Main.Instance.gameState.hasMadeAChoice) {
 			textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Word;
-			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.04f,0.065f);
+			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.09f,0.25f);
+			//pdPatch.SendBang("v");
 		} else {
 			textTyperSettings.splitMode = TypedText.TypedTextSettings.SplitMode.Character;
-			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.03f,0.0425f);
+			// this is where the speed of typed letters can be varied
+			textTyperSettings.defaultTypeDelay = new TypedText.RandomTimeDelay(0.1f,0.2f);
+			//pdPatch.SendBang("v");
 		}
 
 		richText = new RichTextSubstring (content);
@@ -52,11 +58,14 @@ public class ContentView : StoryElementView {
 	void OnTypeText (string newText) {
 		text.text = richText.Substring(0, textTyper.text.Length);
 		if(newText != " ")
-			AudioClipDatabase.Instance.PlayKeySound ();
+			//AudioClipDatabase.Instance.PlayKeySound ();
+			// the below works
+			pdPatch.SendBang("v");
 	}
 
 	protected override void CompleteTyping () {
 		colorTween.Tween(text.color, driedColor, 8);
+		pdPatch.SendBang("longChord");
 		base.CompleteTyping();
 	}
 }

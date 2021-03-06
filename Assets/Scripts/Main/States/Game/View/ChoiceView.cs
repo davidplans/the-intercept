@@ -6,6 +6,9 @@ using Ink.Runtime;
 [RequireComponent(typeof(Button))]
 [RequireComponent(typeof(GraphicPulser))]
 public class ChoiceView : StoryElementView {
+	
+	public LibPdInstance pdPatch;
+
 	public ChoiceGroupView choiceGroupView;
 	public Choice choice;
 
@@ -71,6 +74,7 @@ public class ChoiceView : StoryElementView {
 	}
 
 	public void OnClick () {
+		pdPatch.SendBang("v");
 		MakeChoice();
 	}
 

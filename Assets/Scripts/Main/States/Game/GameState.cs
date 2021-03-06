@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 using Debug = UnityEngine.Debug;
 
-public class GameState : MainState {
+public class GameState : MainState {	
 
 	// The json compiled ink story
 	public TextAsset storyJSON;

@@ -39,8 +39,8 @@ public class IntroTypedText : UIMonoBehaviour {
 	}
 
 	void OnTypeText (string newText) {
-		if(newText != " ")
-			AudioClipDatabase.Instance.PlayKeySound();
+		//if(newText != " ")
+			//AudioClipDatabase.Instance.PlayKeySound();
 	}
 
 	private void Update () {
