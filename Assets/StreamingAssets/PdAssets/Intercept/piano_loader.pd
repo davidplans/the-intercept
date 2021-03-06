@@ -1,0 +1,9 @@
+#N canvas 465 268 579 392 10;
+#X obj 24 25 inlet;
+#X obj 38 78 table \$1-piano;
+#X obj 24 136 s toSoundfiler;
+#X obj 24 57 f \$1;
+#X msg 24 103 read -resize piano_soft/\$1.wav \$1-piano;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;

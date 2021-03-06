@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Main : MonoSingleton<Main> {
 	[Header("Skips the intro (editor only)")]
-	public bool skipIntro = false;
+	public bool skipIntro = true;
 	public bool fastIntro = false;
 
 	[HideInInspector]

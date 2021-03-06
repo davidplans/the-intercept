@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 
 public class ContentManager : UIMonoBehaviour, IBeginDragHandler {
-
+	 
 	public RectTransform canvasRectTransform {
 		get {
 			return (RectTransform)GetComponentInParent<Canvas>().transform;

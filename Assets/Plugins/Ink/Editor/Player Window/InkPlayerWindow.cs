@@ -6,12 +6,14 @@ using System.Collections.Generic;
 using Ink.Runtime;
 using Debug = UnityEngine.Debug;
 
+
 namespace Ink.UnityIntegration {
 
 	/// <summary>
 	/// Ink player window. Tests stories in an editor window.
 	/// </summary>
 	public class InkPlayerWindow : EditorWindow {
+
 		private TextAsset storyJSONTextAsset;
 		private string storyJSON;
 		private Story story;

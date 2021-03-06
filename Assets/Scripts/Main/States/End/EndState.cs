@@ -10,7 +10,7 @@ public class EndState : MainState {
 
 	public override void Enter () {
 		base.Enter ();
-		AudioClipDatabase.Instance.PlayHorrorSting();
+		//AudioClipDatabase.Instance.PlayHorrorSting();
 		endView.Show();
 		Main.Instance.backgroundAmbienceController.QuietMode();
 	}

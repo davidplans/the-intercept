@@ -56,6 +56,7 @@ public class ChoiceGroupView : UIMonoBehaviour {
 	}
 
 	IEnumerator FadeOutAndContinue (Choice choice) {
+		yield return new WaitForSeconds(4f);
 		foreach (ChoiceView choiceView in choiceViews) {
 			choiceView.StopAllCoroutines();
 			if(choiceView.choice == choice)

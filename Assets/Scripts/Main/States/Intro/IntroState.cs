@@ -53,7 +53,7 @@ public class IntroState : MainState {
 		while(theInterceptText.typedText.typing) {
 			yield return null;
 		}
-		AudioClipDatabase.Instance.PlayHorrorSting();
+//		AudioClipDatabase.Instance.PlayHorrorSting();
 		yield return new WaitForSeconds(2.5f);
 		theInterceptText.gameObject.SetActive(false);
 

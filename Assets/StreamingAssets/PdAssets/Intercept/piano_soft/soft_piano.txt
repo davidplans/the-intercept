@@ -1,0 +1,11 @@
+This files are not all exactly the same length.
+
+They are close-mic’ed but as the notes are played softly, they will have some background hiss.
+
+I have left in the mechanism noise when taking the note off, à la Nils Frahm.
+
+75.wav and 77.wav  are particularly quiet so I didn’t normalise to 60% like I did the others, just boosted the amplitude as much as I dared for the hiss.
+
+Unfortunately, in order to make sure the notes sound when triggered (without noticeable delay) I often had to cut off the initial mechanical noise picked up by the close-mic’ing that would have been lovely to keep.
+
+I also like the idea that this sample collection has captured a snapshot of the piano as it sounded, some of the notes weren’t absolutely in tune, and these slight variations will help to add character and individuality.

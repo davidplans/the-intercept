@@ -1,0 +1,13 @@
+#N canvas 624 70 555 596 10;
+#X obj 252 249 outlet;
+#X obj 252 210 * 0.01;
+#X obj 252 166 random 80;
+#X obj 252 188 + 18;
+#X obj 252 141 inlet;
+#X text 60 157 goes from 0.18 - 0.97;
+#X text 216 269 send this to a line~ object \, and multiply by the
+audio signal you wish to humanise.;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
